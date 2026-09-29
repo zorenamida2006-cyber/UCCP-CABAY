@@ -1137,3 +1137,86 @@ Lightbox modal
     font-size: 13px;
   }
   }
+
+
+
+
+
+
+
+
+
+
+/* ---------- Announcements (index.html) ---------- */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.news-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-accent);   /* gold na guhit sa kaliwa */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 26px 28px;
+}
+
+.news-label {
+  display: inline-block;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.news-date {
+  color: var(--color-accent-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.news-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.news-text {
+  color: var(--color-text-muted);
+  white-space: pre-line;      /* susundin ang line breaks na isinulat mo */
+}
+
+@media (max-width: 720px) {
+  .news-card {
+    padding: 22px 20px;
+  }
+}
+
+/* Mobile menu 
+@media (max-width: 720px) {
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 20px 22px;           /* mas malaking tap area 
+    border-bottom: none;
+  }
+  .nav-links a :hover{
+    background-color: black;
+  }
+
+
+  .nav-links.is-open {
+    max-height: 420px;            /* dapat sapat para sa lahat ng link 
+  }
+}
