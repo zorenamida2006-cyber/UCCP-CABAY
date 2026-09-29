@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UCCP Cabay - Church Events</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION (same on every page) -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-emblem"><img src="uccplogo.png" alt=""></span>
+        UCCP Cabay
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Church Events</a></li>
+      </ul>
+
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Church Events &amp; Activities</h1>
+      <p>See what's happening at UCCP Cabay and join us.</p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+        EVENTS GRID
+        HOW TO ADD A NEW EVENT:
+        1. Copy one whole <article class="event-card"> ... </article> block
+        2. Paste it below the last one
+        3. Update the image, date, title, and description
+        4. Add the matching image file inside images/events/
+        The "Read more" button and expand/collapse behavior work
+        automatically - no JavaScript changes needed.
+        ========================================================= -->
+  <section>
+    <!--new addition-->
+
+<!-- CHURCH PHOTO GALLERY -->
+<section class="alt-bg">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Church Activity Photos </h2>
+      <p>A glimpse of our life together as a church family.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <!-- Gallery Album 1 -->
+      <div class="gallery-item" onclick="openGallery(0)">
+        <img src="vcs img/VCS20.jpg" alt="Church Anniversary">
+        <div class="gallery-overlay">
+          <h3 >VCS-2026</h3>
+          <p>Click to view photos</p>
+        </div>
+      </div>
+      
+
+      <!-- Gallery Album 2 -->
+      
+      <div class="gallery-item" onclick="openGallery(1)">
+        <img src="youthactivity img/youth1.jpg" alt="Youth Activities">
+        <div class="gallery-overlay">
+          <h3 >Youth Activities</h3>
+          <p>Click to view photos</p>
+        </div>
+      </div>
+
+      <!-- Gallery Album 3 -->
+      <div class="gallery-item" onclick="openGallery(2)">
+        <img src="visitation img/visitation2.jpg" alt="Sunday Worship">
+        <div class="gallery-overlay">
+          <h3 >visitation</h3>
+          <p>Click to view photos</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openGallery(3)">
+        <img src="anniversary img/curchanniversary1.jpg" alt="Sunday Worship">
+        <div class="gallery-overlay">
+          <h3 >church Anniversary</h3>
+          <p>Click to view photos</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openGallery(3)">
+        <img src="uccpcabay.jpg" alt="Sunday Worship">
+        <div class="gallery-overlay">
+          <h3 >Sunday Worship</h3>
+          <p>Click to view photos</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openGallery(3)">
+        <img src="vcs img/vcs15.jpg" alt="Sunday Worship">
+        <div class="gallery-overlay">
+          <h3 >other</h3>
+          <p>Click to view photos</p>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PHOTO LIGHTBOX -->
+<div id="photoGallery" class="lightbox">
+
+  <button class="close-btn" onclick="closeGallery()">&times;</button>
+
+  <button class="prev-btn" onclick="previousPhoto()">&#10094;</button>
+
+  <div class="lightbox-content">
+    <img id="galleryImage" src="" alt="Church Photo">
+
+    <div class="photo-counter">
+      <span id="photoNumber">1</span>
+      /
+      <span id="photoTotal">1</span>
+    </div>
+  </div>
+
+  <button class="next-btn" onclick="nextPhoto()">&#10095;</button>
+
+</div>
+
+  </section>
+
+  <!-- FOOTER (same on every page) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>UCCP Cabay</h4>
+          <p>Purok 6. Brgy.Cabay Balangyan E.Samar </p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>FACEBOOK ACCOUNT:</p>
+          <a href="https://www.facebook.com/profile.php?id=61563159086201" title="Visit Us on facebook">Sidc Cyf Cabay</a>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a><br>
+          <a href="about.html">About</a><br>
+          <a href="events.html">Church Events</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 UCCP Cabay. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">&uarr;</button>
+
+  <script src="scriptuccp.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
